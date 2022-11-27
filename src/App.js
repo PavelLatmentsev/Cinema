@@ -6,10 +6,12 @@ import "./App.css";
 import { MainLayout } from "layouts/MainLayout/index";
 import { Home } from "Pages/home";
 import { Favorites } from "Pages/favorites";
-import { useGetFilms } from "./hooks/useGetFilms";
+import { useFilms } from "./hooks/useGetFilms";
+import { FilmDetail } from "Pages/filmDetails";
 
 function App() {
-  const { films, isLoading } = useGetFilms();
+  const { films, isLoading, handleLiked } = useFilms();
+
   return (
     <Router>
       <MainLayout>
@@ -18,10 +20,13 @@ function App() {
         ) : (
           <Switch>
             <Route path="/" exact>
-              <Home films={films} />
+              <Home films={films} onLike={handleLiked} />
             </Route>
             <Route path="/favorite">
-              <Favorites films={films} />
+              <Favorites films={films} onLike={handleLiked} />
+            </Route>
+            <Route path="/film/:id">
+              <FilmDetail films={films} onLike={handleLiked} />
             </Route>
           </Switch>
         )}

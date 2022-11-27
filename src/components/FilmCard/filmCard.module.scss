@@ -1,0 +1,26 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.image {
+    width: 235px;
+    height: 350px;
+    border-radius: 16px;
+}
+.description {
+    font-size: 18px;
+    text-align: center;
+    max-width: 235px;
+}
+.liked {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.likedBtn {
+    border:none;
+    background: transparent;
+}
