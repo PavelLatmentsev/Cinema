@@ -1,0 +1,27 @@
+.home {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+
+}
+.container {
+    padding-top: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.image {
+    width: 235px;
+    height: 350px;
+    border-radius: 16px;
+}
+.description {
+    font-size: 18px;
+    text-align: center;
+    max-width: 235px;
+}
